@@ -1,0 +1,25 @@
+Git 学习笔记：
+$ git --version   查看版本
+$ git config --global user.name "Your Name"		配置账号
+$ git config --global user.email "email@example.com"	配置邮箱
+	注意git config命令的--global参数，用了这个参数，表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址
+$ mkdir learngit	创建仓库位置
+$ cd learngit	进入仓库目录
+$ pwd	查看当前目录
+$ git init  命令把这个目录变成Git可以管理的仓库
+$ ls -ah	查看隐藏文件
+$ git add readme.txt	添加到仓库
+$ git add file2.txt file3.txt	添加多个文件
+$ git commit -m "wrote a readme file"	add完紧接着提交文件,-m表示提交注释
+$ git status	查看仓库当前的状态
+$ git diff readme.txt	查看版本差异
+$ git log	命令显示从最近到最远的提交日志
+$ git log --pretty=oneline	提交日志只显示id(版本号)和注释
+$ git reset --hard HEAD^	恢复到上一个版本(该目录下有多个文件怎么办)
+$ cat readme.txt	查看文件内容
+$ git reset --hard 3628164	恢复到某一个版本(此处的版本号不需要全写写前7位就行)
+$ git reflog	查看历史命令日志
+
+
+
+
