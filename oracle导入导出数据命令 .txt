@@ -1,0 +1,19 @@
+expdp egeoshop/egeoshop  dumpfile=EGEOSHOP.DMP schemas=EGEOSHOP
+在本机上运行以下语句
+impdp EGEOSHOP/EGEOSHOP  dumpfile=EGEOSHOP.DMP schemas=EGEOSHOP
+expdp EGEOSHOP4/EGEOSHOP4  dumpfile=EGEOSHOP4.DMP schemas=egeoshop4 version=10.2.0.1.0 --11G到10G，带上版本号,注意schemas为用户名
+
+exp egeoshop/egeoshop  file=c:/EGEOSHOP.DMP  log=c:/egeoshop.log
+imp egeoshop/egeoshop file=C:/Users/Administrator/Desktop/jmeter/20160204075711EGEOSHOP.DMP full=y fromuser=EGEOSHOP touser=EGEOSHOP
+
+impdp egeoshop/egeoshop  dumpfile=EGEOSHOP-expdp.DMP schemas=egeoshop
+
+imp egeoshop/egeoshop file=C:/Users/Administrator/Desktop/EGEOSHOP.DMP full=y fromuser=egeoshop touser=egeoshop
+
+
+impdp egeoshop/egeoshop  dumpfile=EGEOSHOP.DMP schemas=EGEOSHOP
+
+
+exp jeeplus2201/jeeplus2201@ORCL file=e:/egeoOA.dmp log=e:/egeoOA.log
+
+imp egeoOA/egeoOA@ORACLEMAIN file="C:\Users\Administrator\Desktop\oa.dmp" full=y ignore=y;
