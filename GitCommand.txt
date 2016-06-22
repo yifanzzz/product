@@ -19,7 +19,7 @@ $ git reset --hard HEAD^	恢复到上一个版本(该目录下有多个文件怎
 $ cat readme.txt	查看文件内容
 $ git reset --hard 3628164	恢复到某一个版本(此处的版本号不需要全写写前7位就行)
 $ git reflog	查看历史命令日志
-
+暂存区 和 工作区的概念
 
 
 
