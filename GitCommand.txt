@@ -9,6 +9,7 @@ $ pwd	查看当前目录
 $ git init  命令把这个目录变成Git可以管理的仓库
 $ ls -ah	查看隐藏文件
 $ git add readme.txt	添加到仓库
+$ git add '测试.txt'	中文名称需要添加单引号
 $ git add file2.txt file3.txt	添加多个文件
 $ git commit -m "wrote a readme file"	add完紧接着提交文件,-m表示提交注释
 $ git status	查看仓库当前的状态
@@ -26,6 +27,20 @@ If no other git process is currently running, this probably means a
 git process crashed in this repository earlier. Make sure no other git
 process is running and remove the file manually to continue
 解决办法是:rm -f /.git/index.lock
+
+$ rm test.txt	删除文件(或直接在文件管理器中删除)
+或者使用$ git rm test.txt	从git中删除，紧接着$ git commit -m "remove test.txt"
+
+如果提示如下错误:
+ssh: connect to host gitub.com port 22: Connection refused
+fatal: Could not read from remote repository.
+执行cd ~
+然后执行ssh -T git@github.com 
+会提示:The authenticity of host 'github.com (192.30.252.121)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,194.30.252.121' (RSA) to the list of known hosts.
+Hi xxx! You've successfully authenticated, but GitHub does not provide shell access
 
 
 
